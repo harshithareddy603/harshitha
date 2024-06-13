@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+#define MAX_SIZE 100
+
+int main() {
+    int arr[MAX_SIZE], i, size = 0;
+
+    // Insert operation
+    arr[size++] = 10;
+    arr[size++] = 20;
+    arr[size++] = 30;
+
+    // Display operation
+    printf("Array elements: ");
+    for (i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    // Delete operation (deleting the second element)
+    int pos = 1;
+    for (i = pos; i < size - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    size--;
+
+    // Display operation after deletion
+    printf("\nArray elements after deletion: ");
+    for (i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
